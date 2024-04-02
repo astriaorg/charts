@@ -1,0 +1,142 @@
+apiVersion: v1
+entries:
+  celestia-local:
+  - apiVersion: v2
+    appVersion: 1.3.0
+    created: "2024-04-02T18:39:12.151117202Z"
+    description: A Helm chart for Kubernetes
+    digest: 8af5bb066dc1afd7fb88db6250abf42778ced9f708a62d1b081c1cfcb7a84b1c
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-local
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-local-0.3.6/celestia-local-0.3.6.tgz
+    version: 0.3.6
+  celestia-node:
+  - apiVersion: v2
+    appVersion: 0.12.4
+    created: "2024-04-02T18:39:12.31957914Z"
+    description: A Helm chart for deploying a Celestia light node.
+    digest: 1f8379db3199ff2b989bd881bde89b5aa7b2b24167dc1e4f1e366f13be20b33e
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-node
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-node-0.2.1/celestia-node-0.2.1.tgz
+    version: 0.2.1
+  evm-rollup:
+  - apiVersion: v2
+    appVersion: 0.7.0
+    created: "2024-04-02T18:39:12.496207415Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.2.1
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: abfdca6348d27794aee456c50ac06d156c706ac061207c4a42bf33cfe519b9c4
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
+    version: 0.10.3
+  hyperlane-agents:
+  - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2024-04-02T18:39:12.695591791Z"
+    description: A Helm chart for deploying a Hyperlane agents.
+    digest: e97749a43b86b56ae62d1d756654816af96245560e7a53d15080e14c91873c00
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: hyperlane-agents
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/hyperlane-agents-0.1.3/hyperlane-agents-0.1.3.tgz
+    version: 0.1.3
+  sequencer:
+  - apiVersion: v2
+    appVersion: 0.10.0
+    created: "2024-04-02T18:39:12.891681422Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 0.5.0
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: ebd0eeda05cbcb5253b5ce063cc4757a27f6b889356a2770cc5c67707e4dc5f3
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-0.11.0/sequencer-0.11.0.tgz
+    version: 0.11.0
+  sequencer-faucet:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2024-04-02T18:39:13.083194794Z"
+    description: A Helm chart for deploying a k8s faucet node for the Astria Sequencer
+      Network.
+    digest: 0936dad0b27dcc50f52b4bd40fe288e7f24bcc911ba487ecfa769a2ecb6cc560
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer-faucet
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-faucet-0.5.0/sequencer-faucet-0.5.0.tgz
+    version: 0.5.0
+  sequencer-relayer:
+  - apiVersion: v2
+    appVersion: 0.11.0
+    created: "2024-04-02T18:39:13.290834654Z"
+    description: A Helm chart for deploying a relayer which writes data from Astria
+      sequencer network to Celestia.
+    digest: 7a45afce80be7bd1d022d5e41fb14d02066c1d96646a0af3f62fe51d7aa8029d
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer-relayer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
+    version: 0.5.0
+generated: "2024-04-02T18:39:13.290840665Z"
