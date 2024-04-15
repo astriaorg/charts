@@ -39,6 +39,29 @@ entries:
   evm-rollup:
   - apiVersion: v2
     appVersion: 0.9.1
+    created: "2024-04-15T23:38:05.236711019Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.2.1
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: 89ec1cfa5fea7484c0237b4415b09b2b19ae1151a4b5b48039d5d050a1f24d3a
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.12.2/evm-rollup-0.12.2.tgz
+    version: 0.12.2
+  - apiVersion: v2
+    appVersion: 0.9.1
     created: "2024-04-09T22:23:56.809218759Z"
     dependencies:
     - condition: celestia-node.enabled
@@ -196,6 +219,28 @@ entries:
   sequencer:
   - apiVersion: v2
     appVersion: 0.10.1
+    created: "2024-04-15T23:38:05.380529602Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 0.5.0
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 347b602871b0313bf58730315ba114ea5efd518e4f25f9bbf9e45c5ed2d0136f
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-0.11.4/sequencer-0.11.4.tgz
+    version: 0.11.4
+  - apiVersion: v2
+    appVersion: 0.10.1
     created: "2024-04-11T20:30:22.321539989Z"
     dependencies:
     - condition: sequencer-relayer.enabled
@@ -285,6 +330,24 @@ entries:
   sequencer-faucet:
   - apiVersion: v2
     appVersion: 0.5.0
+    created: "2024-04-15T23:38:05.529447573Z"
+    description: A Helm chart for deploying a k8s faucet node for the Astria Sequencer
+      Network.
+    digest: ebefe95d43441caa877e345bd6822d845d742cd7ecfcddb78a8cdaaa0801ca44
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer-faucet
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-faucet-0.5.1/sequencer-faucet-0.5.1.tgz
+    version: 0.5.1
+  - apiVersion: v2
+    appVersion: 0.5.0
     created: "2024-04-02T18:39:13.083194794Z"
     description: A Helm chart for deploying a k8s faucet node for the Astria Sequencer
       Network.
@@ -320,4 +383,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-04-11T20:30:22.321576056Z"
+generated: "2024-04-15T23:38:05.529519026Z"
