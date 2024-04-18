@@ -2,6 +2,23 @@ apiVersion: v1
 entries:
   celestia-local:
   - apiVersion: v2
+    appVersion: 1.6.0
+    created: "2024-04-18T21:36:03.512934202Z"
+    description: Helm chart to deploy a local celestia network, for testing purposes
+    digest: 1fcf788a227201814d187d6db9c3c1fecb8115781edd909b7d2724fff43b196f
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-local
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-local-0.3.7/celestia-local-0.3.7.tgz
+    version: 0.3.7
+  - apiVersion: v2
     appVersion: 1.3.0
     created: "2024-04-02T18:39:12.151117202Z"
     description: A Helm chart for Kubernetes
@@ -198,6 +215,22 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
+  hermes:
+  - apiVersion: v2
+    appVersion: 1.8.2
+    created: "2024-04-18T21:36:03.655224225Z"
+    description: A Helm chart for deploying a k8s node of hermes
+    digest: 38af747fd6ff913e5d2de16da1658346b7c469418a8b86265159dc1184085349
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: hermes
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/hermes-0.1.0/hermes-0.1.0.tgz
+    version: 0.1.0
   hyperlane-agents:
   - apiVersion: v2
     appVersion: 0.1.2
@@ -217,6 +250,28 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/hyperlane-agents-0.1.3/hyperlane-agents-0.1.3.tgz
     version: 0.1.3
   sequencer:
+  - apiVersion: v2
+    appVersion: 0.10.1
+    created: "2024-04-18T21:36:03.806799588Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 0.5.0
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 294efe6783d2c01e9bb58966a162314139cbcd76d2d06a73d07789d92b2a8a86
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-0.11.7/sequencer-0.11.7.tgz
+    version: 0.11.7
   - apiVersion: v2
     appVersion: 0.10.1
     created: "2024-04-17T16:12:35.110859636Z"
@@ -427,4 +482,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-04-17T16:12:35.110930308Z"
+generated: "2024-04-18T21:36:03.806882102Z"
