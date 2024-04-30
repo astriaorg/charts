@@ -408,6 +408,28 @@ entries:
   sequencer:
   - apiVersion: v2
     appVersion: 0.11.0
+    created: "2024-04-30T12:47:57.001247925Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 0.6.2
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 77a5a24597c3fa0bdd01dd7cf85e6aae59a6d14a1e292847c4af5b9e393ed99c
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-0.13.2/sequencer-0.13.2.tgz
+    version: 0.13.2
+  - apiVersion: v2
+    appVersion: 0.11.0
     created: "2024-04-30T00:34:47.003431247Z"
     dependencies:
     - condition: sequencer-relayer.enabled
@@ -750,6 +772,24 @@ entries:
   sequencer-relayer:
   - apiVersion: v2
     appVersion: 0.12.0
+    created: "2024-04-30T12:47:57.108269609Z"
+    description: A Helm chart for deploying a relayer which writes data from Astria
+      sequencer network to Celestia.
+    digest: 6795faa905ba85ddc792db57ead7c985ff415e58b47c84f617620cdc9170a45f
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer-relayer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.6.2/sequencer-relayer-0.6.2.tgz
+    version: 0.6.2
+  - apiVersion: v2
+    appVersion: 0.12.0
     created: "2024-04-30T00:34:47.132619898Z"
     description: A Helm chart for deploying a relayer which writes data from Astria
       sequencer network to Celestia.
@@ -838,4 +878,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-04-30T00:34:47.132761533Z"
+generated: "2024-04-30T12:47:57.108429728Z"
