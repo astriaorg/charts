@@ -55,6 +55,23 @@ entries:
   celestia-node:
   - apiVersion: v2
     appVersion: 0.13.4
+    created: "2024-05-02T23:28:55.791222306Z"
+    description: A Helm chart for deploying a Celestia light node.
+    digest: c71802c066ea4f38f9d5f3acb7b3bc60db77beda19eddbdcb960a69c8aefe666
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-node
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-node-0.3.1/celestia-node-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: 0.13.4
     created: "2024-04-27T01:59:05.119928883Z"
     description: A Helm chart for deploying a Celestia light node.
     digest: a42f0a2431453eabdac80c09ab09d6e5490e53899295e3f9e670a52651bafdde
@@ -88,6 +105,29 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/celestia-node-0.2.1/celestia-node-0.2.1.tgz
     version: 0.2.1
   evm-rollup:
+  - apiVersion: v2
+    appVersion: 0.10.0
+    created: "2024-05-02T23:28:55.891468346Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.1
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: 8b293790f37b44bb8d5b0abc47bbbb5bc5a9d947291cc4cd6d52fa3e0ef2d7e5
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.15.2/evm-rollup-0.15.2.tgz
+    version: 0.15.2
   - apiVersion: v2
     appVersion: 0.10.0
     created: "2024-05-02T20:23:46.639650764Z"
@@ -964,4 +1004,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-05-02T20:23:46.952456025Z"
+generated: "2024-05-02T23:28:55.99678423Z"
