@@ -107,6 +107,29 @@ entries:
   evm-rollup:
   - apiVersion: v2
     appVersion: 0.10.0
+    created: "2024-05-06T22:48:56.436381465Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.1
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: 211d51c73375537a8411f37dbb497e156f6977ce21b9b703491eb85e6e772e21
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.15.3/evm-rollup-0.15.3.tgz
+    version: 0.15.3
+  - apiVersion: v2
+    appVersion: 0.10.0
     created: "2024-05-02T23:28:55.891468346Z"
     dependencies:
     - condition: celestia-node.enabled
@@ -492,6 +515,28 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/hyperlane-agents-0.1.3/hyperlane-agents-0.1.3.tgz
     version: 0.1.3
   sequencer:
+  - apiVersion: v2
+    appVersion: 0.11.0
+    created: "2024-05-06T22:48:56.556887545Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 0.6.3
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 3117907b05dc76b0465f760d6eac1a926f03815157290615237e5a24381ae795
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-0.13.4/sequencer-0.13.4.tgz
+    version: 0.13.4
   - apiVersion: v2
     appVersion: 0.11.0
     created: "2024-05-02T20:23:46.805168175Z"
@@ -1004,4 +1049,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-05-02T23:28:55.99678423Z"
+generated: "2024-05-06T22:48:56.557086294Z"
