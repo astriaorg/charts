@@ -54,6 +54,23 @@ entries:
     version: 0.3.6
   celestia-node:
   - apiVersion: v2
+    appVersion: 0.13.6
+    created: "2024-05-21T00:38:32.926142348Z"
+    description: A Helm chart for deploying a Celestia light node.
+    digest: b2005b55a2537d7e3f2083429b40961b854be76c6031e82c6a71fc600d7dbb69
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-node
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-node-0.3.2/celestia-node-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
     appVersion: 0.13.4
     created: "2024-05-02T23:28:55.791222306Z"
     description: A Helm chart for deploying a Celestia light node.
@@ -105,6 +122,29 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/celestia-node-0.2.1/celestia-node-0.2.1.tgz
     version: 0.2.1
   evm-rollup:
+  - apiVersion: v2
+    appVersion: 0.10.0
+    created: "2024-05-21T00:38:33.112596631Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.2
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: 2ac3ec28dafc1bd1f51ba051f0ed257538af2d3c3b28394771473b8df3739838
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.16.3/evm-rollup-0.16.3.tgz
+    version: 0.16.3
   - apiVersion: v2
     appVersion: 0.10.0
     created: "2024-05-17T15:01:27.789401846Z"
@@ -1220,4 +1260,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-05-17T15:01:27.78961235Z"
+generated: "2024-05-21T00:38:33.113005564Z"
