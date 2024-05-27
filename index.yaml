@@ -124,6 +124,29 @@ entries:
   evm-rollup:
   - apiVersion: v2
     appVersion: 0.10.1
+    created: "2024-05-27T17:29:48.68848746Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.2
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: 549554c9116593e8fdc8c21ee7ece6b8c2eb00e7c60fd2e444e7dfb9dbb6cf75
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.18.4/evm-rollup-0.18.4.tgz
+    version: 0.18.4
+  - apiVersion: v2
+    appVersion: 0.10.1
     created: "2024-05-26T16:03:47.426761154Z"
     dependencies:
     - condition: celestia-node.enabled
@@ -1523,4 +1546,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-05-26T16:03:47.427066175Z"
+generated: "2024-05-27T17:29:48.689108188Z"
