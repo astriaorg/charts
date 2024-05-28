@@ -810,6 +810,28 @@ entries:
   sequencer:
   - apiVersion: v2
     appVersion: 0.13.0
+    created: "2024-05-28T20:26:18.20726407Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 0.8.3
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: e5d8501bab038de4eabef7d3576f19775a3d4019264449f6aebaa21743820d49
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-0.15.3/sequencer-0.15.3.tgz
+    version: 0.15.3
+  - apiVersion: v2
+    appVersion: 0.13.0
     created: "2024-05-28T19:19:18.307772143Z"
     dependencies:
     - condition: sequencer-relayer.enabled
@@ -1372,6 +1394,24 @@ entries:
   sequencer-relayer:
   - apiVersion: v2
     appVersion: 0.13.0
+    created: "2024-05-28T20:26:18.340495404Z"
+    description: A Helm chart for deploying a relayer which writes data from Astria
+      sequencer network to Celestia.
+    digest: 8c3f9d6e087ea5b0d54906f8d02858f22e7941f98bafcd44cf3d8d0e644cc4c5
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer-relayer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.8.3/sequencer-relayer-0.8.3.tgz
+    version: 0.8.3
+  - apiVersion: v2
+    appVersion: 0.13.0
     created: "2024-05-28T19:19:18.482708184Z"
     description: A Helm chart for deploying a relayer which writes data from Astria
       sequencer network to Celestia.
@@ -1586,4 +1626,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-05-28T19:19:18.483048342Z"
+generated: "2024-05-28T20:26:18.340765723Z"
