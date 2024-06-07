@@ -1,6 +1,6 @@
 apiVersion: v2
-name: sequencer
-description: A Helm chart for deploying a k8s node of Astria Sequencer
+name: bridge-withdrawer
+description: A Helm chart for deploying the evm bridge withdrawer for Astria native bridge
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.16.0
+version: 0.0.1
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,16 +23,8 @@ version: 0.16.0
 # It is recommended to use it with quotes.
 appVersion: "0.13.0"
 
-dependencies:
-  - name: sequencer-relayer
-    version: "0.9.0"
-    repository: "file://../sequencer-relayer"
-    condition: sequencer-relayer.enabled
-
 maintainers:
   - name: wafflesvonmaple
-    url: astria.org
-  - name: steezeburger
     url: astria.org
   - name: joroshiba
     url: astria.org

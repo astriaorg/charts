@@ -31,21 +31,17 @@ config:
       enabled: true
       inboundEnabled: true
       outboundEnabled: true
-      sudoAddress: 1c0c490f1b5528d8173c5de46d131160e4b2c0c3
-      relayerAddresses:
-        - 1c0c490f1b5528d8173c5de46d131160e4b2c0c3
-        - 34fec43c7fcab9aef3b3cf8aba855e41ee69ca3a
+      # Sudo Address must be set
+      sudoAddress: ""
+      relayerAddresses: []
+        # - 1c0c490f1b5528d8173c5de46d131160e4b2c0c3
+        # - 34fec43c7fcab9aef3b3cf8aba855e41ee69ca3a
     # Note large balances must be strings support templating with the u128 size account balances
-    genesisAccounts:
-    - address: 1c0c490f1b5528d8173c5de46d131160e4b2c0c3
-      balance: "340282366920938463463374607431768211455"
-    - address: 34fec43c7fcab9aef3b3cf8aba855e41ee69ca3a
-      balance: "340282366920938463463374607431768211455"
-    - address: 60709e2d391864b732b4f0f51e387abb76743871
-      balance: "340282366920938463463374607431768211455"
-      # NOTE - the following address matches the privKey that funds the sequencer-faucet
-    - address: 00d75b270542084a54fcf0d0f6eab0402982d156
-      balance: "340282366920938463463374607431768211455"
+    genesisAccounts: []
+      # - address: 1c0c490f1b5528d8173c5de46d131160e4b2c0c3
+      #   balance: "340282366920938463463374607431768211455"
+      # - address: 34fec43c7fcab9aef3b3cf8aba855e41ee69ca3a
+      #   balance: "10000000"
 
     metrics:
       enabled: false
@@ -63,7 +59,9 @@ config:
 
   # Values for CometBFT node configuration
   cometBFT:
+    # Chain ID for the CometBFT network
     chainId: 'sequencer-test-chain-0'
+    # Genesis time for the CometBFT network, formatted in ISO 8601 Date and Time UTC format
     genesisTime: '2023-09-22T17:22:35.092832Z'
     # If using postgres for indexing, update to enabled and set the connection
     psql:
@@ -156,7 +154,6 @@ ports:
   cometBFTMETRICS: 26660
   sequencerABCI: 26658
   sequencerGRPC: 8080
-  relayerRPC: 2450
   sequencerMetrics: 9000
 
 # ServiceMonitor configuration
@@ -201,7 +198,7 @@ storage:
 
 ingress:
   rpc:
-    enabled: true
+    enabled: false
     hostname: sequencer.localdev.me
     ingressClassName: nginx
     # For Kubernetes >= 1.18 you should specify the ingress-controller via the field ingressClassName
