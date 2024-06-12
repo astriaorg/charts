@@ -902,6 +902,28 @@ entries:
   sequencer:
   - apiVersion: v2
     appVersion: 0.13.0
+    created: "2024-06-12T12:35:37.214096868Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 0.8.5
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 51c94b8d3ff24131fc6acee48386e45f72f38cfbcb91ed18732a85070e1b5a5b
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-0.15.7/sequencer-0.15.7.tgz
+    version: 0.15.7
+  - apiVersion: v2
+    appVersion: 0.13.0
     created: "2024-06-10T16:57:30.496309676Z"
     dependencies:
     - condition: sequencer-relayer.enabled
@@ -1496,6 +1518,24 @@ entries:
     version: 0.11.0
   sequencer-faucet:
   - apiVersion: v2
+    appVersion: 0.6.0
+    created: "2024-06-12T12:35:37.364906597Z"
+    description: A Helm chart for deploying a k8s faucet node for the Astria Sequencer
+      Network.
+    digest: 87679200b0989eee15ce1615d4047c956a5ea208b7a7b1143985e73fa2ed6e95
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer-faucet
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-faucet-0.7.0/sequencer-faucet-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
     appVersion: 0.5.0
     created: "2024-04-23T05:23:44.683912646Z"
     description: A Helm chart for deploying a k8s faucet node for the Astria Sequencer
@@ -1820,4 +1860,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-06-10T16:57:30.649017475Z"
+generated: "2024-06-12T12:35:37.365178855Z"
