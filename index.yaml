@@ -1,5 +1,19 @@
 apiVersion: v1
 entries:
+  bridge-test:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2024-07-17T08:19:55.602356698Z"
+    description: A Helm chart for Kubernetes
+    digest: 4cfc7a9ce48401c3860e13edc0bf13797d52645be69bb5bc4eaacdeb50cf3101
+    maintainers:
+    - name: steezeburger
+      url: astria.org
+    name: bridge-test
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/bridge-test-0.1.0/bridge-test-0.1.0.tgz
+    version: 0.1.0
   bridge-withdrawer:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -56,6 +70,23 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/bridge-withdrawer-0.0.1/bridge-withdrawer-0.0.1.tgz
     version: 0.0.1
   celestia-local:
+  - apiVersion: v2
+    appVersion: 1.8.0
+    created: "2024-07-17T08:19:55.747589002Z"
+    description: Helm chart to deploy a local celestia network, for testing purposes
+    digest: 1121e768d03749a9d1c4274c69c95b269a72bb3acbc1860bd5996eb5bca411b6
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-local
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-local-0.5.0/celestia-local-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 1.8.0
     created: "2024-04-27T01:59:04.986787189Z"
@@ -177,6 +208,31 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/celestia-node-0.2.1/celestia-node-0.2.1.tgz
     version: 0.2.1
   evm-rollup:
+  - apiVersion: v2
+    appVersion: 0.13.0
+    created: "2024-07-17T08:19:55.87238635Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.2
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: 64fb9492931888f89841092f8e0fd566b082601953496dcbed1b5209b5999c94
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.23.2/evm-rollup-0.23.2.tgz
+    version: 0.23.2
   - apiVersion: v2
     appVersion: 0.13.0
     created: "2024-07-09T12:02:23.603357215Z"
@@ -1098,6 +1154,23 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
   hermes:
+  - apiVersion: v2
+    appVersion: 1.8.2
+    created: "2024-07-17T08:19:55.993597059Z"
+    description: A Helm chart for deploying a k8s node of hermes
+    digest: fe4702bd5588fc4f18f3bae03fc619b9b09e27d7eff274f0e21387af4487019d
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: hermes
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/hermes-0.4.0/hermes-0.4.0.tgz
+    version: 0.4.0
   - apiVersion: v2
     appVersion: 1.8.2
     created: "2024-04-27T01:59:05.359993529Z"
@@ -2290,4 +2363,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-07-15T12:59:28.736627877Z"
+generated: "2024-07-17T08:19:55.994051926Z"
