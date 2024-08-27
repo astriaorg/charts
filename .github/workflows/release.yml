@@ -21,6 +21,11 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
       - name: Install Helm
         uses: azure/setup-helm@v4
+      - name: Setup helm repos
+        run: |
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm repo add blockscout https://blockscout.github.io/helm-charts
+          helm repo update
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
         env:
