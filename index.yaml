@@ -1801,6 +1801,23 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/evm-stack-0.4.0/evm-stack-0.4.0.tgz
     version: 0.4.0
+  graph-node:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-09-27T17:22:17.634570228Z"
+    description: A Helm chart for Graph Node deployment
+    digest: e24b76d6ea11e2b3c4c3e9b9dc1d09c0bb026c21d021cd7d43a37a68922a2a93
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: graph-node
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/graph-node-0.1.0/graph-node-0.1.0.tgz
+    version: 0.1.0
   hermes:
   - apiVersion: v2
     appVersion: 1.8.2
@@ -3210,4 +3227,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-09-23T22:48:12.423959282Z"
+generated: "2024-09-27T17:22:17.634887387Z"
