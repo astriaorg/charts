@@ -1,5 +1,20 @@
 apiVersion: v1
 entries:
+  astrotrek:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-10-02T14:45:46.831317993Z"
+    description: A Helm chart for deploying a k8s sequencer explorer for the Astria
+      Sequencer Network.
+    digest: f61d2530c3ec0299e486d95928dd3230b55f49fb0ac8c04c1e60ebe2b1e4db27
+    maintainers:
+    - name: quasystaty1
+      url: astria.org
+    name: astrotrek
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/astrotrek-0.0.1/astrotrek-0.0.1.tgz
+    version: 0.0.1
   bridge-test:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -3417,4 +3432,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-10-02T14:10:48.740642619Z"
+generated: "2024-10-02T14:45:46.831571617Z"
