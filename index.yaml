@@ -331,6 +331,23 @@ entries:
   composer:
   - apiVersion: v2
     appVersion: 0.8.3
+    created: "2024-10-14T13:33:24.679108143Z"
+    description: Astria composer helm chart
+    digest: 3f08d617b0b73d04098dda7b60737867d5e787ac345ee6901c899e6723d56f17
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: composer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/composer-0.1.5/composer-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 0.8.3
     created: "2024-09-23T22:48:11.163445808Z"
     description: Astria composer helm chart
     digest: 05b4574285543d0d2745fa43266c38ede8e97b5275c4d8afe99bcd985c5c53b9
@@ -364,6 +381,24 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/composer-0.1.2/composer-0.1.2.tgz
     version: 0.1.2
   evm-bridge-withdrawer:
+  - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2024-10-14T13:33:24.834854584Z"
+    description: A Helm chart for deploying the evm bridge withdrawer for Astria native
+      bridge
+    digest: 9a91f467eae4b9b27cf36968dbe1d39b3feb19fe5e467dc4ed1131b6e4bfa259
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-bridge-withdrawer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-bridge-withdrawer-0.3.1/evm-bridge-withdrawer-0.3.1.tgz
+    version: 0.3.1
   - apiVersion: v2
     appVersion: 0.3.0
     created: "2024-09-23T22:48:11.285606791Z"
@@ -436,6 +471,26 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-faucet-0.1.1/evm-faucet-0.1.1.tgz
     version: 0.1.1
   evm-rollup:
+  - apiVersion: v2
+    appVersion: 0.14.3
+    created: "2024-10-14T13:33:25.000324595Z"
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: c2aa06ba026088e117c3bec5b84f76f36c558c57e894a9adf2963b55f65bfc31
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.27.6/evm-rollup-0.27.6.tgz
+    version: 0.27.6
   - apiVersion: v2
     appVersion: 0.14.3
     created: "2024-10-02T14:10:48.629731944Z"
@@ -1549,6 +1604,51 @@ entries:
   evm-stack:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2024-10-14T13:33:25.194696299Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.6
+    - name: evm-rollup
+      repository: file://../evm-rollup
+      version: 0.27.6
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 0.1.5
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.2
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 0.3.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.2
+    description: Configure and
+    digest: dfc017a8c3220790cb193365bba354a774e005a35de582340f71b14b5fb7fe1f
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-0.6.3/evm-stack-0.6.3.tgz
+    version: 0.6.3
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2024-10-02T14:10:48.740157289Z"
     dependencies:
     - condition: celestia-node.enabled
@@ -1966,6 +2066,23 @@ entries:
   hermes:
   - apiVersion: v2
     appVersion: 1.8.2
+    created: "2024-10-14T13:33:25.346760896Z"
+    description: A Helm chart for deploying a k8s node of hermes
+    digest: 89e98136191437c233c3ca4479ad713121b03312a76b2116f72b67d5dc7e51e1
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: hermes
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/hermes-0.4.2/hermes-0.4.2.tgz
+    version: 0.4.2
+  - apiVersion: v2
+    appVersion: 1.8.2
     created: "2024-09-23T22:48:12.027199539Z"
     description: A Helm chart for deploying a k8s node of hermes
     digest: 06d5b7bed2acd4091db84402bf7a2f297525215876e3640913d533639d3be5d6
@@ -2062,6 +2179,28 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/hyperlane-agents-0.1.3/hyperlane-agents-0.1.3.tgz
     version: 0.1.3
   sequencer:
+  - apiVersion: v2
+    appVersion: 0.17.0
+    created: "2024-10-14T13:33:25.523321162Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 0.12.2
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 51628d27916c4e057487029af78fba666919f0e624b8fa9b035c35a2d51cf51c
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-0.23.2/sequencer-0.23.2.tgz
+    version: 0.23.2
   - apiVersion: v2
     appVersion: 0.17.0
     created: "2024-09-30T16:02:23.375986281Z"
@@ -3432,4 +3571,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-10-02T14:45:46.831571617Z"
+generated: "2024-10-14T13:33:25.524208024Z"
