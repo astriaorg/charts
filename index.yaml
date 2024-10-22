@@ -2358,6 +2358,23 @@ entries:
   hermes:
   - apiVersion: v2
     appVersion: 0.3.0
+    created: "2024-10-22T15:20:52.105785597Z"
+    description: A Helm chart for deploying a k8s node of hermes
+    digest: 5a0a55675cf6947e3d74c5fc665bfaa2aba8c4216155e2e91c33a4b68cb0ff64
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: hermes
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/hermes-0.5.1/hermes-0.5.1.tgz
+    version: 0.5.1
+  - apiVersion: v2
+    appVersion: 0.3.0
     created: "2024-10-17T15:19:48.115819098Z"
     description: A Helm chart for deploying a k8s node of hermes
     digest: b6ae48faf7935c77926dc1190d35bb994a8321c2ddf0c5863ffff1c174c3bac2
@@ -4043,4 +4060,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-10-17T23:29:15.447266076Z"
+generated: "2024-10-22T15:20:52.106180091Z"
