@@ -434,6 +434,24 @@ entries:
   evm-bridge-withdrawer:
   - apiVersion: v2
     appVersion: 1.0.0-rc.1
+    created: "2024-10-24T17:49:26.935262341Z"
+    description: A Helm chart for deploying the evm bridge withdrawer for Astria native
+      bridge
+    digest: 80cbbd420011f10fa60eca4d021be986d2d1f974cb1a45f661108509cf4c6dee
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-bridge-withdrawer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-bridge-withdrawer-1.0.0-rc.3/evm-bridge-withdrawer-1.0.0-rc.3.tgz
+    version: 1.0.0-rc.3
+  - apiVersion: v2
+    appVersion: 1.0.0-rc.1
     created: "2024-10-22T18:21:10.710505844Z"
     description: A Helm chart for deploying the evm bridge withdrawer for Astria native
       bridge
@@ -1751,6 +1769,51 @@ entries:
   evm-stack:
   - apiVersion: v2
     appVersion: 1.0.0-rc.1
+    created: "2024-10-24T17:49:27.100479459Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.6
+    - name: evm-rollup
+      repository: file://../evm-rollup
+      version: 0.28.1
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 1.0.0-rc.2
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.2
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.0-rc.3
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.2
+    description: Configure and
+    digest: 2aa0f700283558616ab05c5281340466e7e27d0e8c71a85a47d1e76605421fa4
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-0.7.4/evm-stack-0.7.4.tgz
+    version: 0.7.4
+  - apiVersion: v2
+    appVersion: 1.0.0-rc.1
     created: "2024-10-24T16:59:17.106056574Z"
     dependencies:
     - condition: celestia-node.enabled
@@ -2647,6 +2710,28 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/hyperlane-agents-0.1.3/hyperlane-agents-0.1.3.tgz
     version: 0.1.3
   sequencer:
+  - apiVersion: v2
+    appVersion: 1.0.0-rc.1
+    created: "2024-10-24T17:49:27.250995791Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 1.0.0-rc.2
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 0428fd4fd6e09e65e7624514904ddcb2d3caa2e75acf2819e709c769a7b51474
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-1.0.0-rc.4/sequencer-1.0.0-rc.4.tgz
+    version: 1.0.0-rc.4
   - apiVersion: v2
     appVersion: 1.0.0-rc.1
     created: "2024-10-23T21:51:43.139490132Z"
@@ -4227,4 +4312,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-10-24T16:59:17.106328541Z"
+generated: "2024-10-24T17:49:27.251632249Z"
