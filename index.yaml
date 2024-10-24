@@ -331,6 +331,23 @@ entries:
   composer:
   - apiVersion: v2
     appVersion: 1.0.0-rc.1
+    created: "2024-10-24T16:59:16.977764246Z"
+    description: Astria composer helm chart
+    digest: 60a9f5de437f6a4f4f16be31160840ded14c7e586d346a57da1a81ed55d3a3a0
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: composer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/composer-1.0.0-rc.2/composer-1.0.0-rc.2.tgz
+    version: 1.0.0-rc.2
+  - apiVersion: v2
+    appVersion: 1.0.0-rc.1
     created: "2024-10-17T18:10:39.940817247Z"
     description: Astria composer helm chart
     digest: f699349e91b86823f56171711b59f2e1d56adabf944bf7650d41d36b87e0b5a9
@@ -1732,6 +1749,51 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
   evm-stack:
+  - apiVersion: v2
+    appVersion: 1.0.0-rc.1
+    created: "2024-10-24T16:59:17.106056574Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.6
+    - name: evm-rollup
+      repository: file://../evm-rollup
+      version: 0.28.1
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 1.0.0-rc.2
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.2
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.0-rc.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.2
+    description: Configure and
+    digest: ed8492418d5a3667a8ffbcca10df5d70bc04ed1dfecb8d007f90eccea5d32304
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-0.7.3/evm-stack-0.7.3.tgz
+    version: 0.7.3
   - apiVersion: v2
     appVersion: 1.0.0-rc.1
     created: "2024-10-22T18:21:10.856824994Z"
@@ -4165,4 +4227,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-10-23T21:51:43.139954665Z"
+generated: "2024-10-24T16:59:17.106328541Z"
