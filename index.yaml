@@ -87,6 +87,23 @@ entries:
   celestia-local:
   - apiVersion: v2
     appVersion: 1.9.0
+    created: "2024-11-07T10:28:40.614329784Z"
+    description: Helm chart to deploy a local celestia network, for testing purposes
+    digest: 9472fe0d66b4e41602b3da6230f3217195cdbae9e6a4f2b46690a545c73a276f
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-local
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-local-0.6.4/celestia-local-0.6.4.tgz
+    version: 0.6.4
+  - apiVersion: v2
+    appVersion: 1.9.0
     created: "2024-09-23T22:48:11.044202697Z"
     description: Helm chart to deploy a local celestia network, for testing purposes
     digest: 4537dd9c4fed99d743af5cdb7fc31771e18c21050664c0a933bdd87fbb76df6a
@@ -1860,6 +1877,51 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
   evm-stack:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-11-07T10:28:40.763929531Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.3.6
+    - name: evm-rollup
+      repository: file://../evm-rollup
+      version: 1.0.0
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 1.0.0
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.2
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.8
+    description: Configure and
+    digest: 6f8571ba2fc525c794e88a7371c7908f86ef09131718e4c0e3cd0cbbc86eadd3
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-1.0.2/evm-stack-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2024-11-04T22:40:54.043063304Z"
@@ -4596,4 +4658,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-11-04T22:40:54.23116166Z"
+generated: "2024-11-07T10:28:40.764249421Z"
