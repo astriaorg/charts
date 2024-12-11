@@ -632,6 +632,23 @@ entries:
   evm-faucet:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2024-12-11T21:22:56.7312303Z"
+    description: EVM Faucet for Astria EVM.
+    digest: a9799e6898c5e7bf66622b5e816bfb98b61ec5ef03d400f59fae35dbe1ea1c09
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-faucet
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-faucet-0.1.3/evm-faucet-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2024-09-23T22:48:11.416644591Z"
     description: EVM Faucet for Astria EVM.
     digest: 57a689cbeaa5db8a4761b0df649097882a34c412e090e39f282e4fcfa4711778
@@ -1898,6 +1915,51 @@ entries:
   evm-stack:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2024-12-11T21:22:56.934639138Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.4.0
+    - name: evm-rollup
+      repository: file://../evm-rollup
+      version: 1.0.0
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 1.0.0
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.3
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.8
+    description: Configure and
+    digest: 6727c0be455bcfb3219903228fd1b5dd77eed129479de785119e18b4add72cac
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-1.0.4/evm-stack-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2024-11-19T11:51:01.97022176Z"
     dependencies:
     - condition: celestia-node.enabled
@@ -2881,6 +2943,22 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-stack-0.4.0/evm-stack-0.4.0.tgz
     version: 0.4.0
   graph-node:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-12-11T21:22:57.118699052Z"
+    description: A Helm chart for Graph Node deployment
+    digest: 281ebb540d0c8d00e24a62e6fe1152f0253a11aa2a866f038b5de303fec08a32
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: graph-node
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/graph-node-0.2.1/graph-node-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2024-11-04T22:40:54.230675219Z"
@@ -4155,6 +4233,26 @@ entries:
     version: 0.11.0
   sequencer-faucet:
   - apiVersion: v2
+    appVersion: 0.9.1
+    created: "2024-12-11T21:22:57.317083651Z"
+    description: A Helm chart for deploying a k8s faucet node for the Astria Sequencer
+      Network.
+    digest: f5bc53be611440b87584f669a6ea19217a82c5a920836c6cf67c50be1de231cf
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    name: sequencer-faucet
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-faucet-0.9.1/sequencer-faucet-0.9.1.tgz
+    version: 0.9.1
+  - apiVersion: v2
     appVersion: 0.9.0
     created: "2024-10-22T15:23:32.188937948Z"
     description: A Helm chart for deploying a k8s faucet node for the Astria Sequencer
@@ -4739,4 +4837,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-11-21T09:38:41.501360539Z"
+generated: "2024-12-11T21:22:57.317512369Z"
