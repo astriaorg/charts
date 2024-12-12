@@ -651,6 +651,23 @@ entries:
   evm-faucet:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2024-12-12T18:29:26.765501521Z"
+    description: EVM Faucet for Astria EVM.
+    digest: 121c1732afaf68a3b625b138ad6d6c66cbe442c818e62e8467ebf214baea517c
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-faucet
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-faucet-0.1.4/evm-faucet-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2024-12-11T21:22:56.7312303Z"
     description: EVM Faucet for Astria EVM.
     digest: a9799e6898c5e7bf66622b5e816bfb98b61ec5ef03d400f59fae35dbe1ea1c09
@@ -1952,6 +1969,51 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
   evm-stack:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-12-12T18:29:26.955546941Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.4.0
+    - name: evm-rollup
+      repository: file://../evm-rollup
+      version: 1.0.1
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 1.0.0
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.4
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.8
+    description: Configure and
+    digest: 6aa43e3056d83d73c0e3f4b92a946fd62fda1f13c0e2f387241cc44fc8d48cd8
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-1.0.6/evm-stack-1.0.6.tgz
+    version: 1.0.6
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2024-12-12T17:35:13.769983707Z"
@@ -4961,4 +5023,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2024-12-12T17:35:14.195034042Z"
+generated: "2024-12-12T18:29:26.955973321Z"
