@@ -720,6 +720,26 @@ entries:
   evm-rollup:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-02-19T17:59:19.578405748Z"
+    description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
+      Network + Celestia.
+    digest: e211a62e381ae47b41910a6ea4ab1e3ebf9ce6f766807f5a17f6a147eb3436a7
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-rollup
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-rollup-1.1.1/evm-rollup-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-01-31T17:55:57.327782766Z"
     description: A Helm chart for EVM rollup in k8s deployed on top of Astria Sequencer
       Network + Celestia.
@@ -1989,6 +2009,60 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
   evm-stack:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-19T17:59:19.692719273Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.4.0
+    - condition: evm-rollup.enabled
+      name: evm-rollup
+      repository: file://../evm-rollup
+      version: 1.1.1
+    - condition: flame-rollup.enabled
+      name: flame-rollup
+      repository: file://../flame-rollup
+      version: 0.0.1
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 1.0.0
+    - condition: auctioneer.enabled
+      name: auctioneer
+      repository: file://../auctioneer
+      version: 0.0.1
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.4
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.8
+    description: Configure and
+    digest: 171fff819151b1fcdb9e2ab7005ea8771a53cafc26b0dad641f8b44300f472e6
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-1.0.10/evm-stack-1.0.10.tgz
+    version: 1.0.10
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-01-31T17:55:57.448431663Z"
@@ -3431,6 +3505,28 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/hyperlane-agents-0.1.3/hyperlane-agents-0.1.3.tgz
     version: 0.1.3
   sequencer:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-19T17:59:19.804635334Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 1.0.1
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: b2895c4f3305219aa2a30f36b3ec1473ca584ff8c7c73d5a68fbbf206b7c7856
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-1.0.4/sequencer-1.0.4.tgz
+    version: 1.0.4
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-01-21T18:54:56.768572129Z"
@@ -5155,4 +5251,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-01-31T17:55:57.448881383Z"
+generated: "2025-02-19T17:59:19.805192214Z"
