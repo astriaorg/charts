@@ -39,3 +39,5 @@ else
   echo "Updating config directory..."
   cp /config/* /cometbft/config/
 fi
+
+chmod -R 0777 /cometbft

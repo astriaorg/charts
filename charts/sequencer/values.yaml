@@ -115,7 +115,6 @@ genesis:
     #   pubKey: lV57+rGs2vac7mvkGHP1oBFGHPJM3a+WoAzeFDCJDNU=
 
 sequencer:
-  abciUDS: true
   mempool:
     parked:
       maxTxCount: 200
@@ -325,7 +324,7 @@ storage:
   local: true
   entities:
     sequencerSharedStorage:
-      size: "50Gi"
+      size: "5Gi"
       persistentVolumeName: "sequencer-shared-storage"
       path: "/data/sequencer-data"
 
