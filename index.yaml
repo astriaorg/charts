@@ -3494,6 +3494,25 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/evm-stack-0.4.0/evm-stack-0.4.0.tgz
     version: 0.4.0
+  external-ingress:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-03-07T19:29:33.33558221Z"
+    description: A Helm chart for deploying ingress access to services in another
+      application set.
+    digest: 881721261f4d46fcf20e88d62a0cd8140bf01f5fbe4b6243d7c50a0d46840e3b
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: external-ingress
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/external-ingress-0.1.0/external-ingress-0.1.0.tgz
+    version: 0.1.0
   flame-rollup:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -5553,4 +5572,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-03-07T18:56:06.632294145Z"
+generated: "2025-03-07T19:29:33.336076169Z"
