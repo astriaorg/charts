@@ -3806,6 +3806,28 @@ entries:
   sequencer:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-03-14T21:04:51.238608178Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 1.0.3
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: d4f301c81ce16c8d6856a3e1800f2d2bf6d18fceee47dbcc76adbc95f8c076a2
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-1.0.7/sequencer-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-03-14T19:52:46.871343258Z"
     dependencies:
     - condition: sequencer-relayer.enabled
@@ -5146,6 +5168,24 @@ entries:
   sequencer-relayer:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-03-14T21:04:51.422745651Z"
+    description: A Helm chart for deploying a relayer which writes data from Astria
+      sequencer network to Celestia.
+    digest: 0ed98532e82b0250e38065b332e880fe1cd866e8fbc3a5a870752c7f8389d948
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer-relayer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-1.0.3/sequencer-relayer-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-03-14T19:52:47.014124655Z"
     description: A Helm chart for deploying a relayer which writes data from Astria
       sequencer network to Celestia.
@@ -5612,4 +5652,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-03-14T19:52:47.014682798Z"
+generated: "2025-03-14T21:04:51.423291006Z"
