@@ -107,6 +107,25 @@ entries:
   celestia-local:
   - apiVersion: v2
     appVersion: 2.3.1
+    created: "2025-05-01T17:35:21.126053218Z"
+    description: Helm chart to deploy a local celestia network, for testing purposes
+    digest: 09393be7c1ec07cbfedaf7a4bc9fa152050d084b0526ca7c77d8198ce5e7460f
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-local
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-local-0.7.3/celestia-local-0.7.3.tgz
+    version: 0.7.3
+  - apiVersion: v2
+    appVersion: 2.3.1
     created: "2025-04-10T15:32:22.20150788Z"
     description: Helm chart to deploy a local celestia network, for testing purposes
     digest: 90a7b83378fee2aabd09bd99733b056bb181ce8143d98d38e3dbcb4eb668a584
@@ -280,6 +299,25 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/celestia-local-0.3.6/celestia-local-0.3.6.tgz
     version: 0.3.6
   celestia-node:
+  - apiVersion: v2
+    appVersion: 0.22.1
+    created: "2025-05-01T17:35:21.246544427Z"
+    description: A Helm chart for deploying a Celestia light node.
+    digest: ef6c8bbec51aff313bc5ae2160311a7941f1d8d11924658be5b3d1623e544856
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-node
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-node-0.5.0/celestia-node-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 0.18.3
     created: "2024-11-19T11:51:01.735944305Z"
@@ -2334,6 +2372,60 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
   evm-stack:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-05-01T17:35:21.433647759Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.5.0
+    - condition: evm-rollup.enabled
+      name: evm-rollup
+      repository: file://../evm-rollup
+      version: 2.0.1
+    - condition: flame-rollup.enabled
+      name: flame-rollup
+      repository: file://../flame-rollup
+      version: 0.1.2
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 1.0.2
+    - condition: auctioneer.enabled
+      name: auctioneer
+      repository: file://../auctioneer
+      version: 0.0.2
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.4
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.5
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.8
+    description: Configure and
+    digest: 8671753df038f1cafa8ef6b36a299a68d30d565328f9b9c8f92db8e523f912bb
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-2.1.0/evm-stack-2.1.0.tgz
+    version: 2.1.0
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-04-30T23:38:21.539661638Z"
@@ -6796,4 +6888,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-04-30T23:38:21.540225493Z"
+generated: "2025-05-01T17:35:21.434243941Z"
