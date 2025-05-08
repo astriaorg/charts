@@ -1,5 +1,19 @@
 apiVersion: v1
 entries:
+  account-monitor:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2025-05-08T16:11:35.193338254Z"
+    description: Astria Account Monitor helm chart
+    digest: 38ecb81da26560495bac0143c65f28511d6c869644ad4c3b86019316d9540321
+    maintainers:
+    - name: quasystaty1
+      url: astria.org
+    name: account-monitor
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/account-monitor-0.0.1/account-monitor-0.0.1.tgz
+    version: 0.0.1
   astrotrek:
   - apiVersion: v2
     appVersion: 0.0.1
@@ -6979,4 +6993,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-05-02T19:49:38.729232739Z"
+generated: "2025-05-08T16:11:35.193897941Z"
