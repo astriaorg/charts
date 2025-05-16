@@ -348,6 +348,25 @@ entries:
   celestia-node:
   - apiVersion: v2
     appVersion: 0.22.2
+    created: "2025-05-16T21:16:12.459766675Z"
+    description: A Helm chart for deploying a Celestia light node.
+    digest: eece0d5286a2833042e1885f534dbe2fe5858741ab00c9925dc18c94b6af6a05
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-node
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-node-0.5.2/celestia-node-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v2
+    appVersion: 0.22.2
     created: "2025-05-13T01:30:20.483666655Z"
     description: A Helm chart for deploying a Celestia light node.
     digest: e79bd73b56812da860daad152284daa22f5326eacbbda02e33130b4e862108fc
@@ -2549,6 +2568,60 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
   evm-stack:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-05-16T21:16:12.706425594Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.5.2
+    - condition: evm-rollup.enabled
+      name: evm-rollup
+      repository: file://../evm-rollup
+      version: 2.1.1
+    - condition: flame-rollup.enabled
+      name: flame-rollup
+      repository: file://../flame-rollup
+      version: 0.1.3
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 1.0.4
+    - condition: auctioneer.enabled
+      name: auctioneer
+      repository: file://../auctioneer
+      version: 0.0.2
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.5
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.5
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.8
+    description: Configure and
+    digest: ad9efdeb9f9e0f096f8c4ba7e2f32eb710335c5f945df47ba0931177c81114b3
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-2.1.5/evm-stack-2.1.5.tgz
+    version: 2.1.5
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-05-13T01:30:20.870071569Z"
@@ -5168,6 +5241,28 @@ entries:
     version: 0.1.3
   sequencer:
   - apiVersion: v2
+    appVersion: 3.0.0-rc.2
+    created: "2025-05-16T21:16:12.933329421Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 1.0.5
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 2992e2db69da034b966a7f39ef9f04961b15b3ddfa0c149f4690ca53c43d8728
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-3.0.0-rc.1/sequencer-3.0.0-rc.1.tgz
+    version: 3.0.0-rc.1
+  - apiVersion: v2
     appVersion: 2.0.1
     created: "2025-05-12T21:45:20.767151972Z"
     dependencies:
@@ -7357,4 +7452,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-05-13T01:30:20.870733567Z"
+generated: "2025-05-16T21:16:12.934672573Z"
