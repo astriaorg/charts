@@ -135,6 +135,25 @@ entries:
   celestia-local:
   - apiVersion: v2
     appVersion: 2.3.1
+    created: "2025-06-13T16:27:03.114563918Z"
+    description: Helm chart to deploy a local celestia network, for testing purposes
+    digest: 239fe76d76173e9b5701f220778f315f54405fe4dc6e83765766d4dde60a0841
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-local
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-local-0.7.5/celestia-local-0.7.5.tgz
+    version: 0.7.5
+  - apiVersion: v2
+    appVersion: 2.3.1
     created: "2025-05-12T21:45:19.812263535Z"
     description: Helm chart to deploy a local celestia network, for testing purposes
     digest: 03f365388e6d978877ecc0014d408a05786ab51ff01458c40c3e6acfc1aae966
@@ -5316,6 +5335,28 @@ entries:
   sequencer:
   - apiVersion: v2
     appVersion: 3.0.0
+    created: "2025-06-13T16:27:03.24453129Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 1.0.6
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: 819d3943189fe9340f89882a92e059df5fb7c17c0091779d2251691a12b17d60
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-3.0.3/sequencer-3.0.3.tgz
+    version: 3.0.3
+  - apiVersion: v2
+    appVersion: 3.0.0
     created: "2025-06-12T11:09:40.001695732Z"
     dependencies:
     - condition: sequencer-relayer.enabled
@@ -7610,4 +7651,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-06-12T11:09:40.002186968Z"
+generated: "2025-06-13T16:27:03.245113657Z"
