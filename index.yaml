@@ -5443,6 +5443,28 @@ entries:
     version: 0.1.3
   sequencer:
   - apiVersion: v2
+    appVersion: 4.0.0-rc.1
+    created: "2025-07-31T10:13:22.07951661Z"
+    dependencies:
+    - condition: sequencer-relayer.enabled
+      name: sequencer-relayer
+      repository: file://../sequencer-relayer
+      version: 1.0.6
+    description: A Helm chart for deploying a k8s node of Astria Sequencer
+    digest: eaaffcefeb98518696768e27741d3a9cde014364bf9b5f3b281c22c97d1b0556
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: sequencer
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/sequencer-4.0.0-rc.1/sequencer-4.0.0-rc.1.tgz
+    version: 4.0.0-rc.1
+  - apiVersion: v2
     appVersion: 3.0.0
     created: "2025-06-13T16:27:03.24453129Z"
     dependencies:
@@ -7760,4 +7782,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-06-30T17:39:44.358101538Z"
+generated: "2025-07-31T10:13:22.080038696Z"
