@@ -405,6 +405,25 @@ entries:
   celestia-node:
   - apiVersion: v2
     appVersion: 0.27.5
+    created: "2025-10-08T17:30:11.355274847Z"
+    description: A Helm chart for deploying a Celestia light node.
+    digest: 3c6716e4b71b28fe3f2904b51be97ba6b1975507130e31557c3974d15e080d74
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: steezeburger
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: celestia-node
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/celestia-node-0.7.1/celestia-node-0.7.1.tgz
+    version: 0.7.1
+  - apiVersion: v2
+    appVersion: 0.27.5
     created: "2025-10-06T18:02:12.665877807Z"
     description: A Helm chart for deploying a Celestia light node.
     digest: fd295b0f73f5216f2731c0e3022fa143d6833ff8dd09fe646db14172a037241f
@@ -2795,6 +2814,60 @@ entries:
     - https://github.com/astriaorg/charts/releases/download/evm-rollup-0.10.3/evm-rollup-0.10.3.tgz
     version: 0.10.3
   evm-stack:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-10-08T17:30:11.511731629Z"
+    dependencies:
+    - condition: celestia-node.enabled
+      name: celestia-node
+      repository: file://../celestia-node
+      version: 0.7.1
+    - condition: evm-rollup.enabled
+      name: evm-rollup
+      repository: file://../evm-rollup
+      version: 4.0.0
+    - condition: flame-rollup.enabled
+      name: flame-rollup
+      repository: file://../flame-rollup
+      version: 0.1.3
+    - condition: composer.enabled
+      name: composer
+      repository: file://../composer
+      version: 2.0.0
+    - condition: auctioneer.enabled
+      name: auctioneer
+      repository: file://../auctioneer
+      version: 0.0.2
+    - condition: evm-faucet.enabled
+      name: evm-faucet
+      repository: file://../evm-faucet
+      version: 0.1.5
+    - condition: evm-bridge-withdrawer.enabled
+      name: evm-bridge-withdrawer
+      repository: file://../evm-bridge-withdrawer
+      version: 1.0.6
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.2.4
+    - condition: blockscout-stack.enabled
+      name: blockscout-stack
+      repository: https://blockscout.github.io/helm-charts
+      version: 1.6.8
+    description: Configure and
+    digest: a09099167e96a9c6ddb42353f7ca204a335a928d8948b2c74a3275608de7a0ea
+    maintainers:
+    - name: wafflesvonmaple
+      url: astria.org
+    - name: quasystaty1
+      url: astria.org
+    - name: joroshiba
+      url: astria.org
+    name: evm-stack
+    type: application
+    urls:
+    - https://github.com/astriaorg/charts/releases/download/evm-stack-5.0.1/evm-stack-5.0.1.tgz
+    version: 5.0.1
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-10-06T18:40:35.511221465Z"
@@ -8179,4 +8252,4 @@ entries:
     urls:
     - https://github.com/astriaorg/charts/releases/download/sequencer-relayer-0.5.0/sequencer-relayer-0.5.0.tgz
     version: 0.5.0
-generated: "2025-10-06T18:40:35.511832364Z"
+generated: "2025-10-08T17:30:11.512881857Z"
